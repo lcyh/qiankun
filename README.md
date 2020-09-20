@@ -2,7 +2,7 @@
 
     微前端是一种多个团队通过独立发布功能的方式来共同构建现代化 web 应用的技术手段及方法策略，
 
-<img src='https://user-gold-cdn.xitu.io/2020/6/3/172795808b5b0cce?imageslim'>
+<img src='https://image-c.weimobwmc.com/wrz/1c9101f5b317428d863a7ec53a11930c.png'>
 
 #### qiankun
 

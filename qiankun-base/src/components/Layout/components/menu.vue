@@ -29,6 +29,7 @@ export default {
     },
   },
   created() {
+    console.log("$route.path", this.$route.path);
     console.log("computedRouterList", this.computedRouterList);
   },
   methods: {},
@@ -42,10 +43,10 @@ export default {
 }
 </style>
 <style scoped>
-.el-menu-vertical >>> .el-menu-item {
+.el-menu-vertical .el-menu-item {
   min-width: auto;
 }
-.el-menu--collapse >>> .el-submenu__icon-arrow {
+.el-menu--collapse .el-submenu__icon-arrow {
   display: none;
 }
 </style>

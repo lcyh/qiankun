@@ -2,10 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-let IS_QIANKUN = window.__POWERED_BY_QIANKUN__;
+let BASE_NAME = window.__POWERED_BY_QIANKUN__ ? "/react" : "";
 function App() {
   return (
-    <BrowserRouter basename={IS_QIANKUN ? "/react" : ""}>
+    <BrowserRouter basename={BASE_NAME}>
       <Link to="/">首页</Link>
       <Link to="/about">关于页面</Link>
       <Route

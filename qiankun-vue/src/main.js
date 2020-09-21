@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import "./publicPath";
 Vue.config.productionTip = false;
 
 let instance = null;
@@ -10,10 +11,7 @@ function render(props) {
     render: (h) => h(App),
   }).$mount("#app"); // 这里是挂载到自己的html中  基座会拿到这个挂载后的html 将其插入进去
 }
-if (window.__POWERED_BY_QIANKUN__) {
-  // 动态添加publicPath
-  __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
-}
+
 if (!window.__POWERED_BY_QIANKUN__) {
   // 默认独立运行
   render();

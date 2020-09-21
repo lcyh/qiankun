@@ -38,11 +38,20 @@ const routes = [
   },
 ];
 
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
-});
+const createRouter = () =>
+  new VueRouter({
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
+  });
+
+const router = createRouter();
+/**
+//  * 重置路由
+//  */
+// export function restRouter() {
+//   router.matcher = createRouter().matcher;
+// }
 
 const whiteList = ["login"];
 router.beforeEach((to, from, next) => {
@@ -71,8 +80,7 @@ router.beforeEach((to, from, next) => {
     next();
   } else {
     //token不存在
-    next({ path: "/login" });
-    // next({ path: "/login", query: { redirect: to.fullPath } });
+    next({ path: "/login", query: { redirect: to.fullPath } });
   }
 });
 

@@ -11,12 +11,13 @@ export default new Vuex.Store({
     token: "",
     userInfo: "",
     routes: [
+      // 添加 主应用路由到右侧菜单
       {
         path: "/",
         icon: "el-icon-location",
         type: "main",
-        key: "main",
-        label: "main",
+        key: "",
+        label: "",
         children: [
           {
             path: "/",

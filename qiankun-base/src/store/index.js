@@ -12,6 +12,35 @@ export default new Vuex.Store({
     userInfo: "",
     routes: [
       {
+        path: "/",
+        icon: "el-icon-location",
+        type: "main",
+        key: "main",
+        label: "main",
+        children: [
+          {
+            path: "/",
+            icon: "el-icon-location",
+            type: "main",
+            key: "home",
+            label: "home",
+            meta: {
+              isAuth: true,
+            },
+          },
+          {
+            path: "/about",
+            icon: "el-icon-location",
+            type: "main",
+            key: "about",
+            label: "about",
+            meta: {
+              isAuth: true,
+            },
+          },
+        ],
+      },
+      {
         path: "/vue",
         icon: "el-icon-location",
         type: "micro",
@@ -24,6 +53,9 @@ export default new Vuex.Store({
             type: "micro",
             key: "vue-project",
             label: "vue-project",
+            meta: {
+              isAuth: true,
+            },
           },
           {
             path: "/vue/about",
@@ -31,6 +63,9 @@ export default new Vuex.Store({
             type: "micro",
             key: "vue-about",
             label: "vue-project-about",
+            meta: {
+              isAuth: true,
+            },
           },
         ],
       },
@@ -47,6 +82,9 @@ export default new Vuex.Store({
             type: "micro",
             key: "react-project",
             label: "react-project",
+            meta: {
+              isAuth: true,
+            },
           },
           {
             path: "/react/about",
@@ -54,6 +92,9 @@ export default new Vuex.Store({
             type: "micro",
             key: "react-project-about",
             label: "react-project-about",
+            meta: {
+              isAuth: true,
+            },
           },
         ],
       },
@@ -85,6 +126,7 @@ export default new Vuex.Store({
     addRouters({ state }) {
       return new Promise((resolve) => {
         const { routes } = state;
+        console.log("routes-store", routes);
         const list = routerList(routes);
         resolve(list);
       });

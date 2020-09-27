@@ -14,7 +14,7 @@ export default {
     HelloWorld,
   },
   created() {
-    console.log("HOME首页", this.$store.state);
+    // console.log("主应用-HOME首页", this.$route);
   },
 };
 </script>

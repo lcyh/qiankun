@@ -36,7 +36,7 @@ export default {
     return {};
   },
   created() {
-    console.log("this.props.route", this.route);
+    // console.log("this.props.route", this.route);
   },
   methods: {},
 };
